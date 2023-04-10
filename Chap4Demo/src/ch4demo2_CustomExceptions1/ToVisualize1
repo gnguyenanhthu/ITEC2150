@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class AverageCalculatorExceptionHandling1a
+{
+
+	public static void main(String[] args)
+	{
+
+		// declare variables
+		Scanner consoleInput = new Scanner(System.in);
+		
+		
+		try 
+		{
+			System.out.println("Enter a number:");
+			String numberString = consoleInput.nextLine();
+			list[i] = Double.parseDouble(numberString);
+		} 
+		catch (NumberFormatException ex)
+		{
+			System.out.println("Sorry- that wasn't a number.");
+		}
+	
+	}
+}
