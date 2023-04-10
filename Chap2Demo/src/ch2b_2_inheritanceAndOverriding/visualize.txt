@@ -1,0 +1,32 @@
+public class Main {
+    public static void main(String[] args) {
+        ClassB b = new ClassB(10, 20);
+        System.out.println("b = " + b);
+    }
+}
+
+
+class ClassA {
+	protected int m;
+
+	public ClassA(int m) {
+		this.m = m;
+	}
+
+	public String toString() {
+		return "ClassA[" + m + "]";
+	}
+}
+
+class ClassB extends ClassA {
+	private int n;
+
+	public ClassB(int m, int n) {
+		super(m);
+		this.n = n;
+	}
+	
+	public String toString() {
+		return "ClassB[" + m + "," + n + "]";
+	}
+}
