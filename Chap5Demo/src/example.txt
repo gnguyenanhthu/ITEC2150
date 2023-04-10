@@ -1,0 +1,5 @@
+There are actually several ways to read and write from text files using the Java API classes. 
+We are going to look at two common ways to do so. Text files typically consist of human readable characters. 
+When dealing with lines of text, the easiest class to use for reading those lines of text in is the BufferedReader class. 
+The associated output class for writing to files is known as BufferedWriter. There are limitations with these classes due to the fact 
+hat they can only read or write lines of text. 

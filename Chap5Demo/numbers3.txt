@@ -1,0 +1,2 @@
+4 numbers read.
+The average of the numbers from file numbers2.txt is 11.10.
