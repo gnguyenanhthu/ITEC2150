@@ -1,0 +1,116 @@
+public class GGCRoster
+{
+	public static void main(String[] args) 
+	{	
+		GGCMember m;
+
+		m = new Faculty(90021028L, "Linda", "Davis", "Academic Affairs", "CHEM"); //m is bound to a Faculty object
+		System.out.println(m); //toString method for the Faculty object will be invoked
+	}
+}
+
+class Faculty extends Employee 
+{
+	private String dept;
+
+	public Faculty(long id, String firstName, String lastName, String division, String dept) 
+	{
+		super(id, firstName, lastName, division);
+		this.dept = dept;
+	}
+
+	public String getDept() 
+	{
+		return dept;
+	}
+
+	public void setDept(String dept) 
+	{
+		this.dept = dept;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Faculty [division=" + getDivision() + ", dept=" + dept + ", " + getFirstName() + " " + getLastName() + "]";
+	}
+}
+
+class Employee extends GGCMember 
+{
+	private String division;
+
+	public Employee(long id, String firstName, String lastName, String division) 
+	{
+		super(id, firstName, lastName);
+		this.division = division;
+	}
+
+	public String getDivision() 
+	{
+		return division;
+	}
+
+	public void setDivision(String division) 
+	{
+		this.division = division;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Employee [ID=" + getID() + ", division=" + division + 
+				", " + getFirstName() + " " + getLastName() + "]";
+	}
+}
+
+
+class GGCMember 
+{
+	private long id;
+	private String firstName;
+	private String lastName;
+	
+	public GGCMember(long id, String firstName, String lastName) 
+	{
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	public long getID() 
+	{
+		return id;
+	}
+
+	public void setID(long id) 
+	{
+		this.id = id;
+	}
+
+	public String getFirstName() 
+	{
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) 
+	{
+		this.firstName = firstName;
+	}
+
+	public String getLastName() 
+	{
+		return lastName;
+	}
+
+	public void setLastName(String lastName) 
+	{
+		this.lastName = lastName;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "GGCMember [ID=" + id + ", " + firstName + " " + lastName + "]";
+	}
+}
